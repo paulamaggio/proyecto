@@ -3,7 +3,7 @@ function Footer(){
     return(
     <footer>
         <p>Sofia Maggio - Justina Vergara - Juan Manuel Neira</p>
-        <p>Copyright © Strem 2023</p>
+        <p>Copyright © Stream 2023</p>
     </footer>
     )
 }
