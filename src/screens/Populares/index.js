@@ -1,10 +1,34 @@
 import React, { Component } from 'react'
+import { options } from '../../utils/constants'
+import PeliculaContainer from '../../components/PeliculaContainer/PeliculaContainer'
 
 export default class index extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+        popular: [],
+        // backup: [],
+    }
+  }
+
+  componentDidMount (){
+    fetch('https://api.themoviedb.org/3/movie/popular', options)
+    .then(resp => resp.json())
+    .then(data => this.setState({
+      popular: data.results.slice(0,5)
+    }))
+    .catch(err => console.error(err));
+  }
+
   render() {
     return (
       <div>
-        Populares
+        <h1>Populares</h1>
+        <main>
+          <h2>Top Movies</h2>
+          <PeliculaContainer peliculas = {this.state.popular}/>
+        </main>
       </div>
     )
   }

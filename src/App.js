@@ -6,6 +6,7 @@ import Favoritos from './screens/Favoritos';
 import Populares from './screens/Populares';
 import Cartelera from './screens/Cartelera';
 import NotFound from './screens/NotFound';
+import Detalle from './screens/Detalle';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Route path={'/favoritos'} component={Favoritos} />
         <Route path={'/populares'} component={Populares} />
         <Route path={'/cartelera'} component={Cartelera} />
-        {/* ruta parametrizada para los detalles */}
+        <Route path = {'/detalle/id/:id'} component = {Detalle} />
         <Route component={NotFound}/>
       </Switch>
 
