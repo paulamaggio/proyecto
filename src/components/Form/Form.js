@@ -15,7 +15,7 @@ class Form extends Component{
             {
             valor: evento.target.value //target identifica al campo objetivo del evento y value trae el valor ingresado
             },
-            () => this.props.filtrarPeliuclas(this.state.valor)
+            () => this.props.filtrarPeliculas(this.state.valor)
         )
     }
 
