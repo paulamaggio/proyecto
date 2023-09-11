@@ -16,7 +16,7 @@ componentDidMount(){
     
     Promise.all(
       favParse.map( id => 
-        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}`)
+        fetch('https://api.themoviedb.org/3/movie/' + id)
         .then(resp => resp.json()))
     )
     .then( data => this.setState({favoritos:data}))
