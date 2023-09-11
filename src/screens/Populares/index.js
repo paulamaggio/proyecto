@@ -16,7 +16,7 @@ export default class index extends Component {
     fetch('https://api.themoviedb.org/3/movie/popular', options)
     .then(resp => resp.json())
     .then(data => this.setState({
-      popular: data.results.slice(0,5)
+      popular: data.results
     }))
     .catch(err => console.error(err));
   }

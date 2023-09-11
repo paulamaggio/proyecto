@@ -16,7 +16,7 @@ export default class index extends Component {
     fetch('https://api.themoviedb.org/3/movie/now_playing', options)
     .then(resp => resp.json())
     .then(data => this.setState({
-      upcoming: data.results.slice(0,5)
+      upcoming: data.results
     }))
     .catch(err => console.error(err));
   }
