@@ -31,7 +31,7 @@ class Pelicula extends Component {
                 :
                 <button onClick={() => this.verMas()}>ver mas</button>
                 } 
-                  
+
             </div>
         )
     }
