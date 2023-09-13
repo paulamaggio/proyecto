@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { options } from '../../utils/constants'
-import Form from '../../components/Form/Form'
 import PeliculaContainer from '../../components/PeliculaContainer/PeliculaContainer'
+import Form from '../../components/Form/Form'
 
 export default class index extends Component {
 
@@ -10,6 +10,7 @@ export default class index extends Component {
     this.state = {
       popular: [],
       backup: [],
+      todas : [],
       // page: 1,
       upcoming: [],
       // backupUp: []
@@ -20,6 +21,12 @@ export default class index extends Component {
   }
 
   componentDidMount() {
+    fetch('https://api.themoviedb.org/3/discover/movie', options)
+      .then(resp=>resp.json())
+      .then(data=>this.setState({
+        todas: data.results
+      }))
+      .catch(err=>console.error(err))
 
     fetch('https://api.themoviedb.org/3/movie/popular', options)
       .then(resp => resp.json())
@@ -36,24 +43,24 @@ export default class index extends Component {
       .catch(err => console.error(err));
   }
 
+  
   filtrarPeliculas(busqueda) {
-console.log(busqueda)
-    this.setState({
-      valorInput: busqueda
-    })
-
-    // let pelisFilt = this.state.backup.filter((elm) => elm.title.toLowerCase().includes(titulo.toLowerCase()))
-    // this.setState({
-    //   popular: pelisFilt,
-    //   upcoming: pelisFilt
-    // })
-  }
+    console.log(busqueda)
+        this.setState({
+          valorInput: busqueda
+        })
+    
+        let pelisFilt = this.state.todas.filter((elm) => elm.title.toLowerCase().includes(busqueda.toLowerCase()))
+         this.setState({
+           resultados: pelisFilt
+         })
+      }
 
   render() {
     return (
       <div>
-        <h1>Home</h1>
         <Form filtrarPeliculas={(busqueda) => this.filtrarPeliculas(busqueda)} />
+        <h1>Home</h1>
         <main>
           {this.state.valorInput === "" ?
           <>
@@ -62,16 +69,17 @@ console.log(busqueda)
           <h2>Upcoming Movies</h2>
           <PeliculaContainer peliculas = {this.state.upcoming} />
           </>
-            : (this.state.resultados ?
+          : 
+          (this.state.resultados ?
               (this.state.resultados.length === 0 ?
                 <>
                   <h2>Resultados de busqueda:</h2>
-                  <h3>No hay resultados que coincidan con tu busqueda</h3>
+                  <h4>No hay resultados que coincidan con tu busqueda</h4>
                 </>
                 :
                 <>
                   <h2>Resultados de busqueda:</h2>
-                  {/* <PeliculaContainer peliculas={this.state.resultados}/> */}
+                  <PeliculaContainer peliculas={this.state.resultados}/> 
                 </>)
                 :
                 <h2>Loading...</h2>
