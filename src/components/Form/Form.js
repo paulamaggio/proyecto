@@ -1,4 +1,5 @@
 import { Component } from "react";
+import './styles.css'
 
 class Form extends Component{
     constructor(props){
@@ -19,13 +20,15 @@ class Form extends Component{
         )
     }
 
+    
+
     render(){
         return(
             <>
-            <p>Buscar</p>
+            <p className='buscar'>Buscar:</p>
             <form onSubmit={(evento)=> this.evitarSubmit(evento)}>
-                <input onChange={(evento)=> this.guardarValor(evento)} value={this.state.valor}/>
-                <button>lupa</button>
+                <input className="formulario" onChange={(evento)=> this.guardarValor(evento)} value={this.state.valor}/>
+                <button className="lupa" ><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             </>
         )

@@ -1,5 +1,6 @@
 import { Component, Fragment } from "react"
 import { Link } from "react-router-dom"
+import './styles.css'
 
 class Pelicula extends Component {
     constructor(props) {
@@ -20,16 +21,16 @@ class Pelicula extends Component {
         return (
             <div className="pelicula-card">
                 <Link to={`/detalle/id/${this.props.id}`}>
-                <img src={`https://image.tmdb.org/t/p/w200${this.props.poster_path}`} alt={this.props.title} />
+                <img className="imagen" src={`https://image.tmdb.org/t/p/w200${this.props.poster_path}`} alt={this.props.title} />
                 </Link>
                 <h4>{this.props.title}</h4>
                 {this.state.boton ? 
                 <>
                 <p>{this.props.overview}</p>
-                <button onClick={() => this.verMenos()}>ver menos</button>
+                <button className="boton" onClick={() => this.verMenos()}>VER MENOS</button>
                 </>
                 :
-                <button onClick={() => this.verMas()}>ver mas</button>
+                <button className="boton" onClick={() => this.verMas()}>VER MAS</button>
                 } 
 
             </div>

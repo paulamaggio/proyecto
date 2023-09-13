@@ -1,0 +1,17 @@
+.lupa{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: 1%;
+    display: inline-block;
+   
+  }
+.imagenDetalle{
+    width:16% ;
+    border-radius: 20px;
+    margin-top: 3%;
+    margin-left: 1%;
+    display: inline-block;
+}

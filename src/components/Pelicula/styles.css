@@ -1,0 +1,13 @@
+.pelicula-card{
+    width: 18% ;
+}
+.imagen{
+    width:100% ;
+    border-radius: 20px;
+}
+.boton{
+    border-radius: 5px;
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: small;
+}

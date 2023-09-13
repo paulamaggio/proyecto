@@ -1,0 +1,19 @@
+.buscar{
+    font-size: x-large;
+    margin-left: 1%;
+}
+.formulario{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 5px;
+  display: inline-block;
+  margin-left: 1%;
+}
+.lupa{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 5px;
+  display: inline-block;
+}

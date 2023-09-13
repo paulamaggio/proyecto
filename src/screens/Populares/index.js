@@ -26,7 +26,6 @@ export default class index extends Component {
       <div>
         <h1>Populares</h1>
         <main>
-          <h2>Top Movies</h2>
           <PeliculaContainer peliculas = {this.state.popular}/>
         </main>
       </div>

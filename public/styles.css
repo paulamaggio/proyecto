@@ -8,7 +8,7 @@ body {
     /* background-color: #ffbd59; */
     /* background-color: #FFEB99; */
     /* background-color: #9DBFFF; */
-    background-image: linear-gradient(90deg,#000000,#3533cd);
+    background-color:  rgb(175, 145, 106);
 }
 h2, h1, p, h4, h5 {
     color: white;

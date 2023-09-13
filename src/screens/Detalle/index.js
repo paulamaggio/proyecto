@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { options } from '../../utils/constants'
+import './styles.css'
 
 export default class index extends Component {
 
@@ -62,7 +63,7 @@ export default class index extends Component {
     return(
       this.state.pelicula !== null ?
       <div>
-        <img src={`https://image.tmdb.org/t/p/w200${this.state.pelicula.poster_path}`} alt={this.state.pelicula.title} />
+        <img className='imagenDetalle' src={`https://image.tmdb.org/t/p/w200${this.state.pelicula.poster_path}`} alt={this.state.pelicula.title} />
         <h4>{this.state.pelicula.title}</h4>
         <h5>Rating: {this.state.pelicula.vote_average}</h5>
         <h5>Fecha de estreno: {this.state.pelicula.release_date}</h5>
@@ -71,11 +72,11 @@ export default class index extends Component {
         {/* <h5>Genero: {this.state.pelicula.}</h5> */}
         {
           this.state.esFavorito ?
-          <button onClick={()=> this.desFavear(this.state.pelicula.id)}>Sacar de favoritos</button> 
+          <button className="lupa" onClick={()=> this.desFavear(this.state.pelicula.id)}><i class="fa-solid fa-heart"></i></button> 
           : 
-          <button onClick={() => this.favear(this.state.pelicula.id)}>Agregar a favoritos</button>
+          <button className="lupa" onClick={() => this.favear(this.state.pelicula.id)}><i class="fa-regular fa-heart"></i></button>
         }
-       
+        
       </div>
       :
       <h1 className=''>Cargando Peliculas...</h1>
