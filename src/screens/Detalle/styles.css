@@ -5,7 +5,8 @@
     padding-top: 5px;
     display: inline-block;
     margin-left: 1%;
-    display: inline-block;
+    background-color: palevioletred;
+    border-radius: 30%;
    
   }
 .imagenDetalle{
@@ -13,5 +14,16 @@
     border-radius: 20px;
     margin-top: 3%;
     margin-left: 1%;
+    margin-bottom: 3%;
+    margin-right: 2%;
+}
+.flex{
+    display: flex;
+}
+.texto{
     display: inline-block;
+    margin-left: 5%;
+}
+.sinopsis{
+    margin-right: 40%;
 }

@@ -62,13 +62,13 @@ export default class index extends Component {
     console.log(this.props);
     return(
       this.state.pelicula !== null ?
-      <div>
+      <div className= 'flex'>
         <img className='imagenDetalle' src={`https://image.tmdb.org/t/p/w200${this.state.pelicula.poster_path}`} alt={this.state.pelicula.title} />
-        <h4>{this.state.pelicula.title}</h4>
+        <p clasName="texto" ><h4>{this.state.pelicula.title}</h4>
         <h5>Rating: {this.state.pelicula.vote_average}</h5>
         <h5>Fecha de estreno: {this.state.pelicula.release_date}</h5>
         <h5>Duracion: {this.state.pelicula.runtime}</h5>
-        <h5>Sinópsis: {this.state.pelicula.overview}</h5>
+        <h5 className="sinopsis" >Sinópsis: {this.state.pelicula.overview}</h5>
         {/* <h5>Genero: {this.state.pelicula.}</h5> */}
         {
           this.state.esFavorito ?
@@ -76,7 +76,7 @@ export default class index extends Component {
           : 
           <button className="lupa" onClick={() => this.favear(this.state.pelicula.id)}><i class="fa-regular fa-heart"></i></button>
         }
-        
+        </p>
       </div>
       :
       <h1 className=''>Cargando Peliculas...</h1>
