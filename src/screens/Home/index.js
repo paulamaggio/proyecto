@@ -9,13 +9,9 @@ export default class index extends Component {
     super(props)
     this.state = {
       popular: [],
-      backup: [],
       todas : [],
-      // page: 1,
       upcoming: [],
-      // backupUp: []
       valorInput: "",
-      todas:[],
       resultados: false
     }
   }
