@@ -69,7 +69,6 @@ export default class index extends Component {
         <h5>Fecha de estreno: {this.state.pelicula.release_date}</h5>
         <h5>Duracion: {this.state.pelicula.runtime}</h5>
         <h5 className="sinopsis" >Sinópsis: {this.state.pelicula.overview}</h5>
-        {/* <h5>Genero: {this.state.pelicula.}</h5> */}
         {
           this.state.esFavorito ?
           <button className="lupa" onClick={()=> this.desFavear(this.state.pelicula.id)}><i class="fa-solid fa-heart"></i></button> 
@@ -83,15 +82,3 @@ export default class index extends Component {
     )
   }
 }
-
-// import React, { Component } from 'react'
-
-// export default class index extends Component {
-//   render() {
-//     return (
-//       <div>
-        
-//       </div>
-//     )
-//   }
-// }

@@ -1,4 +1,4 @@
-import { Component, Fragment } from "react"
+import { Component } from "react"
 import { Link } from "react-router-dom"
 import './styles.css'
 
