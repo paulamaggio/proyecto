@@ -55,6 +55,7 @@ export default class index extends Component {
   render() {
     return (
       <div>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <Form filtrarPeliculas={(busqueda) => this.filtrarPeliculas(busqueda)} />
         <h1>Home</h1>
         <main>

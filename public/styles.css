@@ -14,3 +14,12 @@ h2, h1, p, h4, h5 {
     color: white;
 }
 
+@media(max-width: 400px) {
+  /* body{background: blue;} */
+  body{font-size:x-small;
+}
+.lupa1{
+    size: 5%;
+}
+}
+

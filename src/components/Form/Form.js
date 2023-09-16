@@ -28,7 +28,7 @@ class Form extends Component{
             <p className='buscar'>Buscar:</p>
             <form onSubmit={(evento)=> this.evitarSubmit(evento)}>
                 <input className="formulario" onChange={(evento)=> this.guardarValor(evento)} value={this.state.valor}/>
-                <button className="lupa" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button className="lupa1" ><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             </>
         )
